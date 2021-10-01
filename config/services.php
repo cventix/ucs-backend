@@ -30,4 +30,25 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'google' => [
+        'client_id'     => env('GOOGLE_CLIENT_ID'),
+        'client_secret' => env('GOOGLE_CLIENT_SECRET'),
+        'redirect'      => env('GOOGLE_REDIRECT')
+    ],
+
+    'zoom' => [
+        'key' => env('ZOOM_API_KEY'),
+        'secret' => env('ZOOM_API_SECRET')
+    ],
+
+    'trello' => [
+        'key' => env('TRELLO_API_KEY'),
+        'token' => env('TRELLO_TOKEN')
+    ],
+
+    'recaptcha' => [
+        'key' => env('GOOGLE_RECAPTCHA_KEY'),
+        'secret' => env('GOOGLE_RECAPTCHA_SECRET'),
+    ],
+
 ];
