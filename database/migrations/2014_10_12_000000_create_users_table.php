@@ -23,7 +23,9 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('mobile')->unique()->nullable();
+            $table->integer('verification_code')->nullable();
             $table->boolean('is_deactivated')->default(false);
+            $table->datetime('email_verified_at')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

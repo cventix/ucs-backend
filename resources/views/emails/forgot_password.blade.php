@@ -3,9 +3,8 @@
 
 <p>
     <a href="{{ sprintf(
-    '%s/reset-password?verification_code=%s&email=%s',
+    '%s/reset-password?verification_code=%s',
     config('platform.spa_links.frontend.forget_password'),
-    $verificationCode,
-    $email
+    $verificationCode
     ) }}"><button>Reset</button></a>
 </p>
