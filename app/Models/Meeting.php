@@ -37,7 +37,7 @@ class Meeting extends Model
 
     protected $searchables = [
         'partial' => ['title'],
-        'exact' => ['user_id'],
+        'exact' => ['id', 'user_id'],
         'scope' => ['started_at'],
     ];
 

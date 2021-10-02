@@ -64,7 +64,7 @@ class User extends Model implements
     ];
 
     protected $searchables = [
-        'exact' => ['gender'],
+        'exact' => ['id', 'gender'],
         'partial' => ['firstname', 'lastname', 'username', 'email'],
         'scope' => ['created_at', 'with_tag', 'without_tags'],
     ];
