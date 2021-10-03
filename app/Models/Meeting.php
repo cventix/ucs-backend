@@ -26,7 +26,8 @@ class Meeting extends Model
     ];
 
     protected $hidden = [
-        'holder_session_id',
+        // Todo: temporary hack should be reversed
+        // 'holder_session_id',
         'holder_meta',
     ];
 
