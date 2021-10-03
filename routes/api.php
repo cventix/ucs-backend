@@ -27,7 +27,7 @@ Route::namespace('API\V1')->prefix('v1')->group(function () {
         Route::middleware('auth:sanctum')->post('/logout', 'AuthController@logout');
     });
 
-    Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
+    Route::group(['middleware' => ['auth:sanctum']], function () {
         Route::prefix('users')->group(function () {
             Route::get('/profile', 'UserController@profile');
             Route::get('/request-mobile-code', 'UserController@requestMobileVerificationCode');

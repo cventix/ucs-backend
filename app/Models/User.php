@@ -28,10 +28,11 @@ class User extends Model implements
     AuthenticatableContract,
     AuthorizableContract,
     CanResetPasswordContract,
-    MustVerifyEmailContract,
+    // MustVerifyEmailContract,
     HasMedia
 {
-    use Authenticatable, Authorizable, CanResetPassword, HasFactory, MagicMethodsTrait, HasApiTokens, Notifiable, SoftDeletes, InteractsWithMedia, Taggable, HasRoles, HasPushSubscriptions, MustVerifyEmail;
+    use Authenticatable, Authorizable, CanResetPassword, HasFactory, MagicMethodsTrait, HasApiTokens, Notifiable, SoftDeletes, InteractsWithMedia, Taggable, HasRoles, HasPushSubscriptions; 
+    // MustVerifyEmail;
 
     /** @var array|string[]  */
     public static array $genders = ['MALE', 'FEMALE'];
