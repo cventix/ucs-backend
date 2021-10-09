@@ -73,6 +73,11 @@ Route::namespace('API\V1')->prefix('v1')->group(function () {
             Route::middleware('permission:REMOVE_MENU_ROLE')->delete('{role}/menus/{menu}', 'RoleController@deleteMenu');
         });
 
+        Route::prefix('popups')->group(function () {
+            Route::middleware('permission:GET_ALL_MEETINGS_POPUP')->get('{popup}/meetings', 'PopupController@getMeetings');
+            Route::middleware('permission:ADD_MEETING_POPUP')->post('{popup}/meetings/{meeting}', 'PopupController@postMeeting');
+        });
+
         Route::softDeleteRoutes('users', 'UserController');
         Route::apiResource('notifications', 'NotificationController')->only(['index', 'show']);
         Route::apiResource('permissions', 'PermissionController')->only(['index', 'show']);
@@ -80,5 +85,6 @@ Route::namespace('API\V1')->prefix('v1')->group(function () {
         Route::apiResource('tags', 'TagController');
         Route::apiResource('users', 'UserController');
         Route::apiResource('roles', 'RoleController');
+        Route::apiResource('popups', 'PopupController');
     });
 });

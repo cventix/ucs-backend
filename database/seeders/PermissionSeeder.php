@@ -17,6 +17,7 @@ class PermissionSeeder extends Seeder
         'notification',
         'role',
         'permission',
+        'popup',
     ];
 
     private $actions = ['get_all', 'get', 'create', 'update', 'delete'];
@@ -27,6 +28,7 @@ class PermissionSeeder extends Seeder
         'notification' => ['send', 'read'],
         'meeting' => ['get_all_users', 'add_user', 'remove_user'],
         'role' => ['get_all_users', 'add_user', 'remove_user', 'get_all_permissions', 'add_permission', 'remove_permission', 'clone'],
+        'popup' => ['add_meeting']
     ];
 
     private $rolePermissions = [

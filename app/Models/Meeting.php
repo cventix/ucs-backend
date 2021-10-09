@@ -62,6 +62,11 @@ class Meeting extends Model
         return $this->belongsToMany(User::class, 'meeting_user', 'user_id');
     }
 
+    public function popups()
+    {
+        return $this->belongsToMany(Popup::class, 'meeting_popup', 'popup_id');
+    }
+
     public function scopeStartedAt($query, $startDate, $endDate = null)
     {
         return $this->dateScopeProvider($query, 'started_at', $startDate, $endDate);
